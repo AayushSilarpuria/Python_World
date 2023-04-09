@@ -1,3 +1,5 @@
+# Program for finding Factorial of an number:
+
 # Iterative Approach:
  # Method 1:
 def fact(num):
