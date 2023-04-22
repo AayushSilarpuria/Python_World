@@ -28,7 +28,8 @@ print(f"{maximum(a,b)} is a maximum number")
 
 # Using list comprehension:
 x=[a if a>b else b ]
-print("maximum number is: ", x)
+print(f"maximum number is: {x[0]}")
+# to remove square brackets from output: [4] we can also remove it from x
 
 #Using sort() method:
 x = [a,b]

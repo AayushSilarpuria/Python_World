@@ -16,7 +16,7 @@ if __name__ == "__main__":
 
     sum_twoNum = lambda num1, num2 : num1 + num2
 
-    print(f"Sum of number {num1} and {num2} is {sum_twoNum}")
+    print(f"Sum of number {num1} and {num2} is {sum_twoNum(num1, num2)}")
 
 
     # Time complexity: O(1)
