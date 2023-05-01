@@ -28,13 +28,14 @@ def armstrong(num):
     l = len(num_str)
     sum = 0
     for digit in num_str:
-        sum += int(digit) ** l
+        sum += int(str(digit)) ** l
     if sum == num:
         return True
     else:
         return False
 
-num = 153 #print(int(input("Enter an number: ")))
+
+num =153 # print(int(input("Enter an number: ")))
 print(armstrong(num))
 
 # Time Complexity: O(n)
