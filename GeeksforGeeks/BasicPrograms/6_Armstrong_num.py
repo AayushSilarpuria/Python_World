@@ -15,3 +15,27 @@ if s == sum1:
     print("The given number", s, "is Armstrong Number.")
 else:
     print("The given number", s, "is not Armstrong Number.")
+
+print()
+
+# Time Complexity: O(logn)
+# Space Complexity: O(1)
+
+# Method-2:
+
+def armstrong(num):
+    num_str = str(num)
+    l = len(num_str)
+    sum = 0
+    for digit in num_str:
+        sum += int(digit) ** l
+    if sum == num:
+        return True
+    else:
+        return False
+
+num = 153 #print(int(input("Enter an number: ")))
+print(armstrong(num))
+
+# Time Complexity: O(n)
+# Space Complexity: O(1)
