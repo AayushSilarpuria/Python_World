@@ -35,7 +35,7 @@ def armstrong(num):
         return False
 
 
-num =153 # print(int(input("Enter an number: ")))
+num = int(input("Enter an number: "))
 print(armstrong(num))
 
 # Time Complexity: O(n)
