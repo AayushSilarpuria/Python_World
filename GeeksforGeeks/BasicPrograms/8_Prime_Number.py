@@ -58,3 +58,38 @@ else:
 
 
 print()
+
+
+#Method-3: Optimized way to find a Prime Number:
+
+def primes(starting_range, ending_range):
+    lst = []
+    flag = 0
+
+    for i in range(starting_range, ending_range):
+        for j in range(2,i):
+            if i%j == 0:
+                flag = 1   # It means i number is not prime.
+                break
+            else:
+                flag = 0
+        if flag == 0:
+            lst.append(i)
+        else:
+            pass
+    return lst
+
+starting_range = int(input("Enter starting number of range: "))
+ending_range = int(input("Enter ending number of range: "))
+new_lst = primes(starting_range, ending_range)
+
+if len(new_lst) == 0:
+    print("The range does not contain any prime number.")
+else:
+    print("The prime number in the range: ", new_lst)
+
+print()
+
+# Time_Complexity: O(n²)
+# Space_Complexity: O(n)
+ 
