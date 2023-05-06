@@ -16,3 +16,11 @@ def count_p(num):
 in_num = int(input("Enter the number: "))
 count_p(in_num)
 
+print()
+
+# Time_Complexity: O(n)
+# Space_Complexity: O(1)
+
+# Method-2:
+
+
