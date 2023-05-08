@@ -15,3 +15,5 @@ stringlen = print(len(Input_string))
 for let in Input_string:
     ascii_code = ord(let)
     print(f"ASCII OF LETTER {let} is {ascii_code}.")
+
+print()
