@@ -21,3 +21,6 @@ for key,value in c.items():
 print(f"Sum of the array is {sum}")
 
 print()
+
+# Time_Complexity: O(n)
+# Space_Complexity: O(n)
