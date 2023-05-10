@@ -77,22 +77,51 @@ print()
 
 # Method-4:
 
-def fibonnaci(n):
+def fibonacci1(n):
     a = 0
     b =1
+    fib = [0,1]
     if n<= 0:
-        print("Incorrect Input")
-    elif n == 0:
-        return a
+        print("Incorrect Input! Please enter positive ineger.")
     elif n == 1:
-        return b
+        return a
+    elif n==2:
+        return fib
     else:
         for i in range(2,n): 
             c = a + b
             a,b = b,c
-        return b
+            fib.append(c)
+        return fib
     
-print(fibonacci(9))
+print(fibonacci1(11))
+
+print()
+print("---------------ANOTHER_WAY-------------------")
+print()
+
+fib = [0,1]
+def fibonacci1(n):
+    a = 0
+    b =1
+    
+    if n<= 0:
+        print("Incorrect Input! Please enter positive ineger.")
+    elif n == 1:
+        return a
+    elif n==2:
+        return fib
+    else:
+        for i in range(2,n): 
+            c = a + b
+            a,b = b,c
+            fib.append(c)
+        return b
+
+d = int(input("Enter fibonacci number:: "))    
+print(fibonacci1(d))
+print(fib)
+
 
 # Time_complexity: O(n)
 # Space_complexity: O(1)
