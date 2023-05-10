@@ -53,3 +53,9 @@ print(f"Large_Large_Large number is {large(arr)}.")
 
 # Time_Complexity: O(n)
 # Space_Complexity: O(1)
+
+def prime(num):
+    
+    # Limit the range of num
+    if num < 2:      
+        return 0

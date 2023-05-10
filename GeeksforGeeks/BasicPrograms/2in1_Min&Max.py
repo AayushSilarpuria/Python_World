@@ -40,3 +40,4 @@ l = [{'name':'ramu', 'score':90, 'age':24},
      {'name':'golu', 'score':70, 'age':19}]
 
 print(max(l, key= lambda item: item.get('age')))
+
