@@ -248,4 +248,40 @@ print(f"Minimum number: {minimum}")
 
 print("-------------")
 
+# Q.18: Write a code to raise an exception.
 
+l = [1,2,3,4]
+try:
+    sum1 = 0
+    for i in l:
+        if i == 1:
+            raise Exception("Exception: 1 is found.")
+        else:
+            sum1 += i
+    print(sum1)
+except:
+    print("Error Occured!")
+
+finally: 
+    print("Yoo")
+
+print("-------------")
+
+
+l = [2,3,4]
+try:
+    sum1 = 0
+    for i in l:
+        if i == 1:
+            raise Exception("Exception: 1 is found.")
+        
+except:
+    print("Error Occured!")
+else:
+    sum1 += i
+    
+finally:
+    print(sum1)
+    print("Yoo")
+
+    
