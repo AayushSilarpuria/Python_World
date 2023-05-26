@@ -17,7 +17,7 @@ def largest(arr, n):
             maximum = arr[i]
     return maximum
 
-# Driver Code:
+    # Driver Code:
 arr = [10, 3231, 44, 776, 9298]
 n = len(arr) 
 Ans = largest(arr, n)
@@ -53,9 +53,3 @@ print(f"Large_Large_Large number is {large(arr)}.")
 
 # Time_Complexity: O(n)
 # Space_Complexity: O(1)
-
-def prime(num):
-    
-    # Limit the range of num
-    if num < 2:      
-        return 0
