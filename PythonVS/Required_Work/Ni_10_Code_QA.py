@@ -77,4 +77,134 @@ def palin2(n):
 n = 12345654321
 print(palin(n))
 print(palin2(n))
+print()
+
+# Q.2: Fibonnaci Series
+
+def fibonnaci(n):
+    a, b = 0, 1
+    print(a)
+    while (b<n):
+        print(b)
+        c = a+b
+        a,b = b,c
+    print(c)
+
+fibonnaci(7)
+print()
+
+def fibo2(n):
+    a,b = 0,1
+    if n == 1:
+        print(a)
+    else:
+        print(a)
+        print(b)
+        for i in range(2,n):
+            c = a+b
+            a = b
+            b = c
+            print(c)
+
+fibo2(7)
+print()
+
+# Recurtion:
+
+def fibo(n):
+    if n<=1:
+        return n
+    else:
+        return (fibo(n-1) + fibo(n-2))
+
+n = 7
+if n<= 0 :
+    print("Invalid")
+else:
+    for i in range(n):
+        print(fibo(i))
+
+print()
+# Q.3: Compress String:
+# Input: 
+inp = "aabbccddeeeefffiiiii"
+# output: "a2b2c2d4"
+
+def compr(inp):
+    n = len(inp)
+    string = ""
+    for i in range(n):
+        if inp[i] not in string:
+            string += inp[i] + str(inp.count(inp[i]))
+    return string
+
+print(compr(inp))
+
+# Method-2:
+
+def compress(s):
+    n = len(s)
+    new_s = ''
+    count = 1
+    for i in range(n-1):
+        if s[i] == s[i+1]:
+            count += 1
+        else:
+            new_s += s[i] + str(count)
+            count = 1
+    new_s += s[n-1] + str(count)
+    return new_s
+
+print(compress(inp))
+
+# Method-3:
+
+def compress2(s):
+    n = len(s)
+    new_s = ""
+    i = 0
+    while (i<n-1):
+        count = 1
+        while(i<n-1 and s[i]== s[i+1]):
+            count+=1
+            i += 1
+        i += 1
+        new_s += s[i-1] + str(count)
+    return new_s
+
+print(compress(inp))
+print()
+# Q.3: FizzBuzz Problem:
+# If number divisible by 3 - print Fizz
+# If number divisible by 5 - print Buzz
+# If number divisible by 15 - print FizzBuzz
+
+def fzzbzz(n):
+    for i in range(1,n+1):
+        if i%3==0 and i%5==0: #i%15 == 0
+            print("FizzBuzz")
+        elif i%3 == 0:
+            print("Fizz")
+        elif i%5 == 0:
+            print("Buzz")
+        else:
+            print(i)
+fzzbzz(15)
+print()
+
+def fizzbuzz2(n):
+    d = {3: 'fizz',
+         5: 'Buzz'}
+    
+    for i in range(1,n+1):
+        result = ''
+        for k,v in d.items():
+             if i%k == 0:
+                 result += v
+        if not result:
+            result = i
+        print(result)
+    
+fizzbuzz2(15)
+print()
 
