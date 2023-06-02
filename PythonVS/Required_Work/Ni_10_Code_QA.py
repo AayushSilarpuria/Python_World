@@ -208,3 +208,71 @@ def fizzbuzz2(n):
 fizzbuzz2(15)
 print()
 
+# Q.4: Character Occurence:
+
+# 1. Least repeating character in a string.
+print("1. Least repeating character in a string.")
+
+
+def least_char_occ(s):
+    print(s)
+    ch = {}
+    for i in s:
+        if i in ch:
+            ch[i] = ch[i]+1
+        else:
+            ch[i] = 1
+    print(ch)
+    result = min(ch, key=ch.get)
+    print(result)
+
+s = "aaabbggjjjeejjuutteflajdlkj"
+least_char_occ(s)
+
+# Using inbuilt functions counter:
+
+from collections import Counter
+s = "aaabbggjjjeejjuutteflajdlkj"
+ch = Counter(s)
+result = min(ch, key=ch.get)
+print(result)
+print()
+
+# 2. Count of an perticular element.
+print("2. Count of an perticular element.")
+
+
+def count_char_occu(s, search_ch):
+    ch = {}
+    for i in s:
+        if i in ch:
+            ch[i] = ch[i]+1
+        else:
+            ch[i] = 1
+    print(ch)
+    try:
+        print(ch[search_ch])
+    except:
+        print(0)
+s = "aaabbggjjjeejjuutteflajdlkj"
+im = input("Enter letter: ")
+count_char_occu(s, im)
+print()
+
+
+# 3. Count of all values.
+print("3. Count of all elements.")
+
+
+def count_all(s):
+    ch = {}
+    for i in s:
+        if i in ch:
+            ch[i] = ch[i]+1
+        else:
+            ch[i] = 1
+    print(ch)
+
+s = "aaabbggjjjeejjuutteflajdlkj"
+count_all(s)
+
