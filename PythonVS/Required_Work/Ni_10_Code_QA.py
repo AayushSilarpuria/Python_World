@@ -412,3 +412,103 @@ def nth_high(l, n):
     print(l[n-1])
 
 nth_high(l1, 5)
+print()
+
+# Q.8: Armstrong Number:
+
+def arms(n):
+    sum = 0
+    temp = n
+    while temp > 0:
+        digit = temp%10 
+        sum += digit**3
+        temp = temp//10 
+    
+    if n == sum:
+        return True
+    else:
+        return False
+
+n = 153
+print(arms(n))
+
+
+# Armstarong Number in range:
+
+def arms2(start, end):
+    for n in range(start, end):
+        sum = 0
+        temp = n
+        while temp >0:
+            digit = temp%10
+            sum += digit**3
+            temp = temp//10
+        
+        if n == sum:
+            print(n)
+
+arms2(1,500)
+print()
+
+
+# Q.9: Sum of digit:
+
+def sum_of_digit(n):
+    sum = 0
+    temp = n
+    if n>9:
+        while temp>0:
+            digit = temp%10
+            sum += digit
+            temp = temp//10
+    else:
+        sum = n
+    return sum
+print("Sum of the digit:")
+print(sum_of_digit(1234515))
+print()
+
+# Q.10: Factorial Number:
+
+# 145! = 1! + 4! + 5! = 1+24+120 = 145
+
+def factorial(n):
+    fact = 1
+    for i in range(1, n+1):
+        fact = fact*i 
+    return fact
+
+print(factorial(4))
+
+def sum_of_factorial(n):
+    sum = 0
+    temp = n
+    while temp>0:
+        digit = temp%10
+        temp = temp//10
+        fact = factorial(digit)
+        sum += fact
+    
+    if sum == n:
+        return True
+    else: 
+        return False
+    
+print(sum_of_factorial(145))
+print()
+
+# List of number in the Range of interval:
+
+def sum_of_rangefact(start, end):
+    for n in range(start, end):
+        sum = 0
+        temp = n
+        while temp>0:
+            digit = temp%10
+            temp = temp//10
+            fact = factorial(digit)
+            sum += fact
+        if sum == n:
+            print(n)
+
+sum_of_rangefact(1,200000)
