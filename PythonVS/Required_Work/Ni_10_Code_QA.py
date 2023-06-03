@@ -366,8 +366,49 @@ def string_m1(senta):
     senta_new = ""
     for i in tmp:
         senta_new += i[0].lower() + i[1:].upper() + '.'
-    return "".join(senta_new[:-1])
+    return senta_new[:-1]
 
 print(string_m1(input))
+print()
+
+# Q.7: Second Highest Number:
+
+# using for loop:
+
+def second_highest(l):
+    if l[0] > l[1]:
+        first = l[0]
+        second = l[1]
+    else:
+        first = l[1]
+        second = l[0]
+    
+    for i in range(2, len(l)):
+       if l[i]>first:
+           second = first
+           first = l[i]
+       elif l[i]>second and first != l[i]:
+           second = l[i]
+    return second
+
+l = [10,20,30,4,100,22,666,666]
+print(second_highest(l))
 
 
+# using reverse sort:
+
+def second2(l):
+    l.sort(reverse=True)
+    print(l[1])
+    l.sort()
+    print(l[-2])
+
+l1 = [10,20,30,4,100,22,666]
+second2(l1)
+
+
+def nth_high(l, n):
+    l.sort(reverse = True)
+    print(l[n-1])
+
+nth_high(l1, 5)
