@@ -255,8 +255,8 @@ def count_char_occu(s, search_ch):
     except:
         print(0)
 s = "aaabbggjjjeejjuutteflajdlkj"
-im = input("Enter letter: ")
-count_char_occu(s, im)
+#im = input("Enter letter: ")
+count_char_occu(s, "m")
 print()
 
 
@@ -275,4 +275,99 @@ def count_all(s):
 
 s = "aaabbggjjjeejjuutteflajdlkj"
 count_all(s)
+print()
+
+# Q.5: Prime Number:
+
+def prime_num(n):
+    if n < 2:
+        return 0
+    
+    pri = [2]
+    x = 3
+    while x <= n:
+        for i in range(3,x,2):
+            if x%i == 0:
+                x += 2
+                break   
+        else:
+            pri.append(x)
+            x += 2
+    print(pri)
+
+prime_num(100)
+
+
+# Method-2:
+
+def prime_num(n):
+    flag = False
+    if n>1:
+        for i in range(2,(n//2+1)):
+            if n%i == 0:
+                flag = True
+                break
+    if flag:
+        return "No! its not a prime number."
+    else:
+        return "Yes! its a prime number."
+print(prime_num(4))
+
+
+# Method-3:
+
+def prime3(n):
+    if n>1:
+        for i in range(2,(n//2)+1):
+            if n%i == 0:
+                print("No! its not prime.")
+                break
+        else:
+            print("Yes! Its prime.")
+    else:
+        print("No! its not prime.")
+prime3(3)
+print()
+
+
+# Method-4:
+print("Mehtod-4:")
+
+def prime4(start, end):
+    for n in range(start, end):
+        if n>1:
+            for i in range(2, n//2+1):
+                if n%i == 0:
+                    break
+            else:
+                print(n)
+prime4(13,100)
+
+# Q.6: Modify String Format:
+
+input = "I_Am_Coder"
+# output = i.aM.cODER
+
+def string_m(string):
+    temp = string.split('_')
+    #print(temp)
+    str_new = []
+    for i in temp:
+        str_new.append(i[0].lower() + i[1:].upper())
+    #print(str_new)
+    return ".".join(str_new)
+
+print(string_m(input))
+
+# Using String
+
+def string_m1(senta):
+    tmp = senta.split('_')
+    senta_new = ""
+    for i in tmp:
+        senta_new += i[0].lower() + i[1:].upper() + '.'
+    return "".join(senta_new[:-1])
+
+print(string_m1(input))
+
 
