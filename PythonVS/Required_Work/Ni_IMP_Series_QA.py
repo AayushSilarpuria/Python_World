@@ -188,6 +188,18 @@ dic_comp_key
 dic_comp_val = {k:v for k,v in sorted(dict1.items(), key= lambda x:x[1])}
 dic_comp_val
 
+
+d = list(dict1.items())
+for i in range(len(d)):
+    for j in range(0,len(d)-i-1):
+        if d[j][1] > d[j+1][1]:
+            d[j], d[j+1] = d[j+1], d[j]
+
+sort_dic = {}
+for k,v in d:
+    sort_dic[k] = v
+print(sort_dic)
+
 print("-------------")
 
 # Q.13: Find the pair of given number in a list with sum equal to 10.
