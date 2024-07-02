@@ -110,6 +110,12 @@ mydict = {'a': 1,
           'e': 5,}
 
 di = str(mydict)
+print(di)
+
+print("-------------")
+
+# Q.9: Send data of mydict into a file in json format. 
+
 # dumps mostly used for string conversion 
 with open('mydict.txt', 'w') as f:
     x = json.dumps(mydict)
@@ -124,10 +130,6 @@ with open(file, 'w') as ff:
 with open(file) as ff:
     data = json.load(ff)
 print(data)
-
-print("-------------")
-
-# Q.9: Send data of mydict into a file in json format. 
 
 # Q.10: Sort A list without using a sort keyword.
 
