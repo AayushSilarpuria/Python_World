@@ -68,7 +68,21 @@ print("-------------")
 
 # Q.6: Write a Dictionary comprehension for a given dictionary in which even number get squared and odd number get cube.
 
+dic = {1:1, 2:2, 3:3, 4:4}
+dc_dic = {k:(v**2 if k%2==0 else (v**3)) for k,v in dic.items()}
+dc_dic
+dc_lst2 = {k:(k**2 if k%2==0 else (k**3)) for k in lst}
+dc_lst2
+
 # Q.7: How do you process json 
+
+import json
+# from dic to json
+d = json.dumps(dc_dic)
+d
+# from json to dic
+x = json.loads(d)
+x
 
 # Q.8: Convert this dictionary in string.
 mydict = {'a': 1,
