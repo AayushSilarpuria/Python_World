@@ -53,6 +53,24 @@ print("-------------")
 
 # Q.3: Write a decorator and also Write two decorator using same function. 
 
+def deco(func):
+    def greet(*args,**kargs):
+        print("Hello")
+        func(*args,**kargs)
+        print("Bye!")
+    return greet
+
+@deco
+def suming(a,b):
+    print(f'sum = {a+b}')
+    return a+b
+suming(10,20)
+
+@deco
+def multiple(a,b):
+    print(f"multiply = {a*b}")
+multiple(10,20)
+
 # Q.4: Write Union of set.
 
 # Q.5: Write a list comprehension for a given list in which even number get squared and odd number get cube.
