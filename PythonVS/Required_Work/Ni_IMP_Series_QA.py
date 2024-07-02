@@ -183,7 +183,10 @@ print(dict2)
 
 print("-------------")
 
-#dict2 = {key:value for key,value in sorted(dict1.items(), key = lambda x:x[i])}
+dic_comp_key = { k:v for k,v in sorted(dict1.items(), key= lambda x:x[0]) }
+dic_comp_key
+dic_comp_val = {k:v for k,v in sorted(dict1.items(), key= lambda x:x[1])}
+dic_comp_val
 
 print("-------------")
 
