@@ -109,6 +109,22 @@ mydict = {'a': 1,
           'd': 4,
           'e': 5,}
 
+di = str(mydict)
+# dumps mostly used for string conversion 
+with open('mydict.txt', 'w') as f:
+    x = json.dumps(mydict)
+    f.write(x)
+with open('mydict.txt', 'r') as f:
+    print(f.read())
+
+# dump, load mostly used for file handling conversion 
+file = 'mydict.json'
+with open(file, 'w') as ff:
+    json.dump(mydict, ff, indent=4)
+with open(file) as ff:
+    data = json.load(ff)
+print(data)
+
 print("-------------")
 
 # Q.9: Send data of mydict into a file in json format. 
